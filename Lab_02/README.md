@@ -4,4 +4,4 @@
 
 Код покрыт юнит-тестами, выполненными с использованием `pytest` и `pytest-cov`.
 
-![Code Coverage](coverage.png)
+<video src='run_and_tests.mp4' width=180/>
