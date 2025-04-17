@@ -170,7 +170,6 @@ def ieee_add(a_float, b_float):
 
     return result, result_bin
 
-# Пример использования
 def main():
     while True:
         a = input("Введите первое число: ")
