@@ -5,7 +5,7 @@ allowed_var = {'a', 'b', 'c', 'd', 'e'}
 allowed_sym = {'&', '|', '!', '->', '~', '(', ')'}
 
 def is_valid_expression(expr):
-    expr = expr.replace('->', 'IMPL').replace('~', 'EQV')  # временная замена
+    expr = expr.replace('->', 'IMPL').replace('~', 'EQV')
     tokens = re.findall(r'[a-e]|IMPL|EQV|[&|!() ]', expr)
     for token in tokens:
         if token not in allowed_var and token not in allowed_sym and token not in {'IMPL', 'EQV'}:
@@ -180,6 +180,3 @@ if __name__ == "__main__":
                 truth_table, _, _ = build_truth_table(used_vars, user_input)
                 karnaugh_imp_dnf = generate_karnaugh_map(truth_table, used_vars)
                 break
-                #a->b
-                #(!a&!b&c)
-                #!(!a->!b)&c
